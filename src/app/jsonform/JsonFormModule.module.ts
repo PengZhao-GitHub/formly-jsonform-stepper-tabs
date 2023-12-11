@@ -75,5 +75,6 @@ import { JsonformComponent } from './jsonform/jsonform.component';
     JsonformComponent,     
     ],
   // providers: [JsonformComponent],
+  exports: [JsonformComponent]
 })
 export class JsonFormModule { }
