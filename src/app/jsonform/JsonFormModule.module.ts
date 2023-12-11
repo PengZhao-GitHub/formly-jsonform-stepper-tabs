@@ -9,13 +9,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
-import { NullTypeComponent } from './null.type';
-import { ArrayTypeComponent } from './array.type';
-import { ObjectTypeComponent } from './object.type';
-import { MultiSchemaTypeComponent } from './multischema.type';
-import { FormlyFieldStepper } from './stepper.type';
-import { FormlyFieldTabs } from './tabs.type';
+import { NullTypeComponent } from './types/null.type';
+import { ArrayTypeComponent } from './types/array.type';
+import { ObjectTypeComponent } from './types/object.type';
+import { MultiSchemaTypeComponent } from './types/multischema.type';
+import { FormlyFieldStepper } from './types/stepper.type';
+import { FormlyFieldTabs } from './types/tabs.type';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { JsonformComponent } from './jsonform/jsonform.component';
 
 
   
@@ -32,6 +33,10 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
     MatTabsModule,
     MatStepperModule,
     MatIconModule,
+
+
+
+
 
     FormlyModule.forRoot({
       validationMessages: [
@@ -60,6 +65,15 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
       ],
     }),
   ],
-  declarations: [ArrayTypeComponent, ObjectTypeComponent, MultiSchemaTypeComponent, NullTypeComponent, FormlyFieldStepper, FormlyFieldTabs],
+  declarations: [
+    ArrayTypeComponent, 
+    ObjectTypeComponent, 
+    MultiSchemaTypeComponent, 
+    NullTypeComponent, 
+    FormlyFieldStepper, 
+    FormlyFieldTabs,
+    JsonformComponent,     
+    ],
+  // providers: [JsonformComponent],
 })
 export class JsonFormModule { }
